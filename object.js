@@ -81,7 +81,16 @@
 // o['carModel'] = 1;
 // console.log(o); //{ name: 'Jess', age: 28, carModel: 1 }
 
-//обращение к свойствам объекта
+//позволяет проверить существование обекта undefined
+// let user = {
+//   newKey: undefined,
+// };
+// console.log(user.age);
+// console.log(user.newKey);
+// console.log(user.name === undefined); // true свойства нет
+// user.name = 'Anna'
+// console.log(user.name === undefined);//false
+
 
 
 
@@ -112,22 +121,53 @@
 // Object.values()
 // Object.values()
 
-const subjects = {'1 1': 'JavaScript', 2: 'Java', sql: "SQL", eng: 'English'}
-// console.log(Object.keys(subjects).sort());
-console.log(Object.entries(subjects));
+// const subjects = {'1 1': 'JavaScript', 2: 'Java', sql: "SQL", eng: 'English'}
+// // console.log(Object.keys(subjects).sort());
+// console.log(Object.entries(subjects));
 
 
 // let obj ={
 //   firstName: 'Sofia',
 //   lastName:'I.',
-//   age: 35
+//   age: 35,
+//   lang : 'Java',
+//   newKey: undefined,
+//   undefined: false,
+//   job: null,
 
 // }
+// console.log(obj);
+// console.log('first' in obj);
+// console.log('first' in obj); //true
+// console.log(null in obj); //false can't check by value
+
 
 
 //================Example
 // let userInfo = {
 //   name: 'Anna',
 //   age: 30,
-//   adress: 
+//   adress: {
+//     city: 'Boston'
+//   }
 // }
+// operator in
+// if('name' in userInfo){
+//   console.log(userInfo.name);
+// }
+
+// console.log(userInfo.adress.street);
+
+
+//const obj = {"a i": 'a', b: 123, 'c': true, d: {1: 1, 2: 2, 3: 3, 4: 4}}
+
+// let newObj = new Object();
+// //newObj = obj;
+// obj.e = "Test"
+// console.log(obj);
+// console.log(newObj);
+// console.log(newObj.e);
+// console.log(obj == newObj);
+
+console.log(obj['a i']);
+
