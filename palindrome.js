@@ -1,3 +1,37 @@
+// aabbaa - true
+// aabaB - false
+// aZaaZa - true
+
+// function palindrome(word){
+//   word = word.toLowerCase();
+//   for (let i = 0; i < word.length / 2; i++){
+//     if (word[i] !== word[word.length - i - 1]){
+//       return false;
+//     }
+//   }
+//   return true
+// }
+// console.log(palindrome('aabbaa'))
+
+function palindrome(word){
+  word = word.toLowerCase();
+  console.log(word.split(''));
+    return word === word.split('').reverse().join('')
+
+}
+console.log(palindrome('aabbaa'))
+
+
+
+
+
+
+
+
+
+
+
+
 // let x = 'Palindrome'
 // let str = ''
 // for(let i=x.length-1; i>=0; i--){ //i=i-1
