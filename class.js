@@ -91,28 +91,35 @@
 // w1.print()
 // w1.printOfficial();
 //====================super==========================
-let log = console.log;
+class Animal{
+  constractor(name, eyes){
+    this.name = name;
+    this.eyes = eyes;
+    this.brain = 'brain';
+    this.spine = 'spain';
+  }
+  getName(){
+    return(`The name of the animal is ${this.name}.`)
+  }
+  isBreath(){
+    return true
+  }
 
-class Person {
-constructor(name, age)
-  this.name = name;
-  this.age = age;
+  isReproduce(){
+    return true
+  }
 }
-    print () {
-        log("Hello, I'm + this.name");
-        log("I'm" + this.age)
-    }
-  }  
-
-class Worker extends Person {
-  constractor(name, age);
-  this.occupation
-}  
-
-function Person(name, age){
-  this.name = name;
-  this.age = age;
-
+//==============================
+class Mammals extends Animal {
+  super(name, eyes)
+  this.skin = 'fur'
+  this.legs = 4
+  this.lungs = 'lungs'
 }
-
-
+setSkin(skin) {
+  this.skin = skin
+  return this.skin
+}
+showBodyParts() {
+  console.log(`${this.name} has${this.legs} legs, ${this.skin}`)
+}
