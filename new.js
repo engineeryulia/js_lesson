@@ -146,7 +146,7 @@
 //forEach() -callback function принимает три элемента число(элемент), index, array
 //передается как элемент в др ф-ю
 //этот метод позв применить коллбэк ф-ю ко всем элементам массива, ничего не возвращает
-const arr = [7, -17, -6, 5, 11, 0]
+// const arr = [7, -17, -6, 5, 11, 0]
 // const changeSign = function (el){
 //   console.log(-el);
 // }
@@ -158,6 +158,134 @@ const arr = [7, -17, -6, 5, 11, 0]
 //   console.log(-el);
 // })
 //or arr.forEach(el => concole.log(-el)
-arr.forEach((el, i) => i % 2 == 0 ? console.log(-el) : console.log (" "))
-// 
+// arr.forEach((el, i) => i % 2 == 0 ? console.log(-el) : console.log (" "))
+
+
+// .sort();
+//const art = ["Anna","Stive", "Jane", "Serge"];
+//console.log(art.sort());  //[ 'Anna', 'Jane', 'Serge', 'Stive' ]
+
+//const arrNum = [1, 30, 25, 45, 0];
+//console.log(arrNum.sort())  //[ 0, 1, 25, 30, 45 ]
+//console.log(arrNum.sort((a, b) => b - a)[0]) //45 первый по убыванию
+
+//.map   возвращает массив
+// const arr = ["JavaScript","Java", "SQL", "Paython"];
+// console.log(arr.map(el => el.length)); //[ 10, 4, 3, 7 ]
+// console.log(arr.map((el, i, arr)=> i == 0|| i == (arr.length -1) ? `*${el}*` : el))
+//[ '**JavaScript**', 'Java', 'SQL', '**Paython**' ]
+
+// const arrNum = [1, 3, 6, 8];
+// const newArr = arrNum.map(item => item ** 2)
+// console.log(newArr); //[ 1, 9, 36, 64 ]
+
+// const numStr = ['1', '3', '6', '8']; //когда сы берем с web страницы
+// const newNum = numStr.map(item => +item)
+// console.log(newNum); //[ 1, 3, 6, 8 ]
+
+//.reduce() .reduceRight()   посчитать сумму произведение
+//.reduce ((accumulator, element, index, array) => {...}, [initial value])
+// const arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// const result = arrNum.reduce((sum, el) => sum + el, 0)
+// sum = 0;
+// el = 1; sum += el : sum += 1
+// el = 2            : sum +=2
+// console.log(result); //55
+// const resProd = arrNum.reduce((prod, el) => prod * el, 1)
+// console.log(resProd); //3628800
+
+//EX. ВЫЧИСЛИТЬ СРЕДНЮЮ
+// const arrNum = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+// let sum = 0;
+// for (let i = 0; i < arrNum.length; i++) {
+//   sum += arrNum[i]
+// }
+// console.log(sum / arrNum.length);// 5.5
+
+// console.log(arrNum.reduce((acc, el, i, arr) => acc + el / arr.length, 0))
+
+
+// Array.from() стaтический метод - создание массива наоснове передаваемого обьекта или значение
+//const arr = Array.from(Array(5).fill('str')) //[ 'str', 'str', 'str', 'str', 'str' 
+// let n = 5
+// const arr = Array.from(Array(n+1).keys()) //[ 0, 1, 2, 3, 4, 5 ]
+// console.log(arr);
+
+// let start = 10
+// let finish = 15
+// const arr = Array.from(Array(finish - start +1).fill(start), (el, i) => el + i) 
+// console.log(arr); //[ 10, 11, 12, 13, 14, 15 ]
+
+// console.log([...Array(start + 1).keys()]); //[ 0, 1, 2, 3, 4..... 10 ]
+
+//Array.of()
+//const arr = Array.of(10, 15, 34, 76, "Anna", "null", "NaN")
+//console.log(arr);
+//Array.isArray() вернуть true/false по результ проверки
+//arr = [];
+//console.log(Array.isArray(arr)); //true
+
+
+
+
+//.toString  or 
+// let n = 15.25
+// let s = `${n}`;
+// console.log(s); // return str  '15.25' [jsbin]
+//console.log(n.toFixed(1)); //return str '15.2'[jsbin] округляет
+//.parseInt  //return number  работает со строкой в которой в начале идут числа
+// console.log(parseInt(n)); //15
+// console.log(typeof(1 * "15")) //number
+
+// console.log('Hello world'.toUpperCase()) // HELLO WORLD
+// console.log('HELLO WORLD'.toLowerCase()) // hello world
+
+//.includes
+// let str = 'Did you notice the notes me?'
+//console.log(str.includes('you')); //true
+//.indexOf()
+// console.log(str.indexOf('you')); //4 возвращает index of el
+// console.log(str.indexOf('I')); //-1 if not such el
+//.lastIndexOf()
+// console.log(str.lastIndexOf('me')); //25 возвращает index of last el
+
+//посчитать элементов в массиве
+// let count = 0;
+// let position = str.indexOf('e');
+//console.log(position); //13
+// while (position != -1){   //если элемента нет
+//   count++;
+//   position = str.indexOf('e', position + 1)   //принудительно заставляем считать 
+// }
+// console.log(count); //4
+
+//.substring
+// let str1 = 'Helloworld'
+// console.log(str1.length); //10
+// console.log(str1.substring(0, 5)); //Hello
+//.slice извлекает часть строки возвращает
+//console.log(str1.slice(2, 4)); //ll
+
+//.replace() возвращает новую строку 
+// const p = 'The quick brown fox jump over the lazy dog. If the dog reacted, was it really lazy'
+// console.log(p.replace('dog', 'monkey')); //заменил только в первом вхождении
+// console.log(p.replaceAll('dog', 'monkey')); //заменил все
+// console.log(p.replaceAll(/dog/gi,  'monkey')); //поменяй все внутри forward slash g-глобально i не чувств в case
+
+//.split    переводит в массив
+// let str = "I do, 2you do, 3they do"
+// console.log(str.split('do')); //[ 'I ', ', 2you ', ', 3they ', '' ]
+// console.log(str.split(/\d/)); //[ 'I do, ', 'you do, ', 'they do' ]
+
+// .trim()
+// const orig = '     *foo*      '
+// console.log(orig.trim()); //*foo*
+
+//padStart(length, otherStr)     //padEnd  осуществляет заполнение справа 
+// function res(str){
+// const a = str.padStart(7, "wood");
+// return a;
+// }
+// console.log(res('Table')) 
+
 
