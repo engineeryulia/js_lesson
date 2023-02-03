@@ -169,5 +169,70 @@
 // console.log(newObj.e);
 // console.log(obj == newObj);
 
-console.log(obj['a i']);
+// console.log(obj['a i']);
 
+
+
+const object = {
+  name: 'Victor',
+  age: 32, 
+  passData: {
+    number: 7788,
+    id:'7788id'
+  }
+};
+object.name = 'Vasy'
+
+const newProperty = 'name';
+
+//console.log(object[newProperty])
+for(let property in object){
+  //console.log(object[property])
+}
+//console.log(object.passData.id)
+
+for(let key in object){
+  if(typeof object[key] === 'object'){
+    for(nestedKey in object[key]){
+      console.log(nestedKey)
+    }
+  }
+}
+
+const object2 = {
+  age: 54
+};
+
+const resultObject = {
+
+};
+
+for (let key in object) {
+  if(object2[key]) {
+    resultObject[key] = object[key] + object2[key]
+  }
+}
+console.log(resultObject)
+
+
+const array = [12, 'string', true, undefined, {name: 'Victor'}];
+
+console.log(array[0])
+
+const studentOne = {
+  name: 'Vasya',
+  avgGrade: 4
+}
+
+const studentTwo = {
+  name: 'Petya',
+  avgGrade: 5
+}
+
+const studentThree = {
+  name: 'Anna',
+  avgGrade: 5
+}
+const students = [studentOne, studentTwo]
+students.push(studentThree)
+console.log(students)
