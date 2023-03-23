@@ -20,4 +20,3 @@ document.write (
                 step1 + '<br>' + step2 + '<br>',
                 step3 + '<br>' + step4 + '<br>',
                 step5 + '<br>' + result)
- 
